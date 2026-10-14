@@ -1,0 +1,30 @@
+[
+    {
+        "id": "T001",
+        "title": "slow desktop performance",
+        "category": "Hardware",
+        "urgency": "high",
+        "affected_users": 45,
+        "priority": "critical",
+        "status": "open",
+        "assigned_to": null,
+        "notes": [
+            {
+                "note_id": "N001",
+                "author": "slow system",
+                "message": "i think this is a major issue that needs to be adressed immediately so the students can follow up with their learning without any blockages"
+            }
+        ]
+    },
+    {
+        "id": "T002",
+        "title": "lagging & freezing of laptop",
+        "category": "Other",
+        "urgency": "medium",
+        "affected_users": 10,
+        "priority": "high",
+        "status": "open",
+        "assigned_to": null,
+        "notes": []
+    }
+]

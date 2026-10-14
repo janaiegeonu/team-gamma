@@ -1,0 +1,81 @@
+Reference test run for the generated CampusFlow Next package
+Command: python -m unittest discover -s tests -v
+Environment: Python standard library only; run from the project root.
+This is evidence for this generated package, not a claim that the user's existing repository or an integrated GitHub merge has already been tested.
+
+test_bad_saved_data_stops_startup_without_overwriting_file (test_cli.TestMainCLI.test_bad_saved_data_stops_startup_without_overwriting_file) ... ok
+test_create_ticket_through_cli_saves_valid_json (test_cli.TestMainCLI.test_create_ticket_through_cli_saves_valid_json) ... ok
+test_invalid_menu_choice_is_reported_and_exit_works (test_cli.TestMainCLI.test_invalid_menu_choice_is_reported_and_exit_works) ... ok
+test_blank_author_is_rejected_without_mutation_or_id_use (test_notes.TestNotes.test_blank_author_is_rejected_without_mutation_or_id_use) ... ok
+test_message_over_300_characters_is_rejected (test_notes.TestNotes.test_message_over_300_characters_is_rejected) ... ok
+test_next_note_id_uses_highest_existing_numeric_id (test_notes.TestNotes.test_next_note_id_uses_highest_existing_numeric_id) ... ok
+test_resolved_ticket_rejects_note_but_reopened_ticket_accepts_it (test_notes.TestNotes.test_resolved_ticket_rejects_note_but_reopened_ticket_accepts_it) ... ok
+test_short_note_is_rejected_without_consuming_id (test_notes.TestNotes.test_short_note_is_rejected_without_consuming_id) ... ok
+test_valid_note_gets_n001_and_trimmed_values (test_notes.TestNotes.test_valid_note_gets_n001_and_trimmed_values) ... ok
+test_view_notes_are_sorted_and_detached_from_ticket_data (test_notes.TestNotes.test_view_notes_are_sorted_and_detached_from_ticket_data) ... ok
+test_empty_report_has_zero_percent (test_reports.TestReports.test_empty_report_has_zero_percent) ... ok
+test_reopened_ticket_is_counted_by_current_status (test_reports.TestReports.test_reopened_ticket_is_counted_by_current_status) ... ok
+test_report_does_not_change_ticket_status (test_reports.TestReports.test_report_does_not_change_ticket_status) ... ok
+test_total_status_priority_and_category_counts (test_reports.TestReports.test_total_status_priority_and_category_counts) ... ok
+test_unresolved_and_resolution_percentage (test_reports.TestReports.test_unresolved_and_resolution_percentage) ... ok
+test_casefold_handles_unicode_case_expansion (test_search.TestSearch.test_casefold_handles_unicode_case_expansion) ... ok
+test_combined_filters_use_and (test_search.TestSearch.test_combined_filters_use_and) ... ok
+test_empty_filters_do_not_restrict_collection (test_search.TestSearch.test_empty_filters_do_not_restrict_collection) ... ok
+test_invalid_filter_is_rejected (test_search.TestSearch.test_invalid_filter_is_rejected) ... ok
+test_priority_view_sorts_priority_then_numeric_id (test_search.TestSearch.test_priority_view_sorts_priority_then_numeric_id) ... ok
+test_search_does_not_mutate_records_or_collection_order (test_search.TestSearch.test_search_does_not_mutate_records_or_collection_order) ... ok
+test_ticket_matching_only_some_filters_is_excluded (test_search.TestSearch.test_ticket_matching_only_some_filters_is_excluded) ... ok
+test_title_substring_search_ignores_case (test_search.TestSearch.test_title_substring_search_ignores_case) ... ok
+test_corrupt_json_is_rejected_and_caller_memory_stays_unchanged (test_storage.TestStorage.test_corrupt_json_is_rejected_and_caller_memory_stays_unchanged) ... ok
+test_data_must_be_a_list (test_storage.TestStorage.test_data_must_be_a_list) ... ok
+test_duplicate_note_ids_within_ticket_are_rejected (test_storage.TestStorage.test_duplicate_note_ids_within_ticket_are_rejected) ... ok
+test_duplicate_ticket_ids_reject_entire_load (test_storage.TestStorage.test_duplicate_ticket_ids_reject_entire_load) ... ok
+test_empty_file_returns_empty_collection (test_storage.TestStorage.test_empty_file_returns_empty_collection) ... ok
+test_invalid_boolean_affected_users_is_rejected (test_storage.TestStorage.test_invalid_boolean_affected_users_is_rejected) ... ok
+test_invalid_save_does_not_overwrite_existing_file (test_storage.TestStorage.test_invalid_save_does_not_overwrite_existing_file) ... ok
+test_invalid_status_is_rejected (test_storage.TestStorage.test_invalid_status_is_rejected) ... ok
+test_legacy_ticket_without_notes_is_migrated_in_memory (test_storage.TestStorage.test_legacy_ticket_without_notes_is_migrated_in_memory) ... ok
+test_missing_file_returns_empty_collection (test_storage.TestStorage.test_missing_file_returns_empty_collection) ... ok
+test_priority_inconsistent_with_fields_is_rejected (test_storage.TestStorage.test_priority_inconsistent_with_fields_is_rejected) ... ok
+test_save_and_load_preserve_notes_and_next_ids (test_storage.TestStorage.test_save_and_load_preserve_notes_and_next_ids) ... ok
+test_critical_rule_precedes_broader_high_rule (test_tickets.TestPriorityCalculation.test_critical_rule_precedes_broader_high_rule) ... ok
+test_high_urgency_with_few_users_is_high (test_tickets.TestPriorityCalculation.test_high_urgency_with_few_users_is_high) ... ok
+test_low_rule (test_tickets.TestPriorityCalculation.test_low_rule) ... ok
+test_medium_rule_uses_urgency_or_three_users (test_tickets.TestPriorityCalculation.test_medium_rule_uses_urgency_or_three_users) ... ok
+test_ten_or_more_users_with_medium_urgency_is_high (test_tickets.TestPriorityCalculation.test_ten_or_more_users_with_medium_urgency_is_high) ... ok
+test_create_rejects_boolean_affected_users_without_append (test_tickets.TestTicketCreation.test_create_rejects_boolean_affected_users_without_append) ... ok
+test_create_ticket_has_notes_and_expected_fields (test_tickets.TestTicketCreation.test_create_ticket_has_notes_and_expected_fields) ... ok
+test_invalid_create_does_not_change_collection (test_tickets.TestTicketCreation.test_invalid_create_does_not_change_collection) ... ok
+test_next_ticket_id_uses_highest_number_not_list_length (test_tickets.TestTicketCreation.test_next_ticket_id_uses_highest_number_not_list_length) ... ok
+test_answers_are_case_insensitive (test_understanding_check.TestUnderstandingCheck.test_answers_are_case_insensitive) ... ok
+test_invalid_choice_retries_and_final_score_uses_submitted_answers (test_understanding_check.TestUnderstandingCheck.test_invalid_choice_retries_and_final_score_uses_submitted_answers) ... ok
+test_six_correct_answers_score_six (test_understanding_check.TestUnderstandingCheck.test_six_correct_answers_score_six) ... ok
+test_wrong_or_missing_answers_do_not_score (test_understanding_check.TestUnderstandingCheck.test_wrong_or_missing_answers_do_not_score) ... ok
+test_affected_users_must_be_positive_integer (test_validation.TestValidation.test_affected_users_must_be_positive_integer) ... ok
+test_blank_title_is_rejected (test_validation.TestValidation.test_blank_title_is_rejected) ... ok
+test_category_is_normalized_to_canonical_value (test_validation.TestValidation.test_category_is_normalized_to_canonical_value) ... ok
+test_invalid_urgency_is_rejected (test_validation.TestValidation.test_invalid_urgency_is_rejected) ... ok
+test_note_message_uses_trimmed_length (test_validation.TestValidation.test_note_message_uses_trimmed_length) ... ok
+test_staff_label_is_trimmed_and_blank_rejected (test_validation.TestValidation.test_staff_label_is_trimmed_and_blank_rejected) ... ok
+test_ticket_id_format_and_number (test_validation.TestValidation.test_ticket_id_format_and_number) ... ok
+test_title_is_trimmed (test_validation.TestValidation.test_title_is_trimmed) ... ok
+test_unknown_category_is_rejected (test_validation.TestValidation.test_unknown_category_is_rejected) ... ok
+test_urgency_is_normalized (test_validation.TestValidation.test_urgency_is_normalized) ... ok
+test_assignment_starts_work_on_open_ticket (test_workflow.TestAssignmentAndTransitions.test_assignment_starts_work_on_open_ticket) ... ok
+test_blank_staff_is_rejected_without_mutation (test_workflow.TestAssignmentAndTransitions.test_blank_staff_is_rejected_without_mutation) ... ok
+test_in_progress_ticket_can_be_resolved (test_workflow.TestAssignmentAndTransitions.test_in_progress_ticket_can_be_resolved) ... ok
+test_open_ticket_cannot_skip_directly_to_resolved (test_workflow.TestAssignmentAndTransitions.test_open_ticket_cannot_skip_directly_to_resolved) ... ok
+test_resolved_ticket_assignment_change_is_rejected_without_mutation (test_workflow.TestAssignmentAndTransitions.test_resolved_ticket_assignment_change_is_rejected_without_mutation) ... ok
+test_resolved_ticket_can_be_reopened (test_workflow.TestAssignmentAndTransitions.test_resolved_ticket_can_be_reopened) ... ok
+test_same_status_is_rejected_without_mutation (test_workflow.TestAssignmentAndTransitions.test_same_status_is_rejected_without_mutation) ... ok
+test_unassigned_open_ticket_cannot_enter_progress (test_workflow.TestAssignmentAndTransitions.test_unassigned_open_ticket_cannot_enter_progress) ... ok
+test_unknown_ticket_is_rejected (test_workflow.TestAssignmentAndTransitions.test_unknown_ticket_is_rejected) ... ok
+test_empty_queue (test_workflow.TestOpenWorkQueue.test_empty_queue) ... ok
+test_numeric_ticket_id_tie_break_does_not_sort_t010_before_t002 (test_workflow.TestOpenWorkQueue.test_numeric_ticket_id_tie_break_does_not_sort_t010_before_t002) ... ok
+test_queue_does_not_reorder_original_collection (test_workflow.TestOpenWorkQueue.test_queue_does_not_reorder_original_collection) ... ok
+test_queue_includes_only_open_sorted_by_priority_then_numeric_id (test_workflow.TestOpenWorkQueue.test_queue_includes_only_open_sorted_by_priority_then_numeric_id) ... ok
+
+----------------------------------------------------------------------
+Ran 71 tests in 0.007s
+
+OK
